@@ -250,6 +250,41 @@ email_drafts_export.zip
 
 ---
 
+## 🌐 Live Cloud Deployment (Streamlit Community Cloud)
+
+This application is configured for deployment on **Streamlit Community Cloud**:
+
+- **GitHub Repository:** [https://github.com/Sanjai07knightrider/DATA_FLOW_STUDIO](https://github.com/Sanjai07knightrider/DATA_FLOW_STUDIO)
+- **Deployment Branch:** `main`
+- **Main Application File:** `app.py`
+- **Runtime Environment:** Python 3.11 (specified in `.python-version`)
+
+### Step-by-Step Deployment Instructions:
+1. Push the repository to GitHub: `git push -u origin main`.
+2. Visit [share.streamlit.io](https://share.streamlit.io/) and log in with your GitHub account (`Sanjai07knightrider`).
+3. Click **"New app"**.
+4. In the deployment modal, configure:
+   - **Repository:** `Sanjai07knightrider/DATA_FLOW_STUDIO`
+   - **Branch:** `main`
+   - **Main file path:** `app.py`
+5. Expand **Advanced settings**:
+   - Python version: select **3.11** (auto-detected via `.python-version`).
+   - Secrets: No secrets are required for standard operation (drafts generate locally in sandbox).
+6. Click **"Deploy!"**.
+7. Once the container builds, Streamlit Cloud provisions a secure public HTTPS URL (e.g., `https://data-flow-studio.streamlit.app` or custom subdomain).
+
+---
+
+## 🗄️ Cloud Storage & Ephemeral Filesystem Architecture
+
+When deployed to Streamlit Community Cloud:
+- **Ephemeral Container Storage:** Streamlit Cloud runs apps inside stateless Linux containers. Files created in `output/` (such as `cleaned_data.csv`, `email_drafts_export.zip`, and user uploads) reside temporarily on the container's ephemeral disk.
+- **In-Session Availability:** During an active user session, all uploaded datasets and generated files remain accessible for instant preview and browser download via Streamlit's native `st.download_button`.
+- **Session Resets & Restarts:** When the cloud container goes to sleep after inactivity or restarts during redeployment, temporary `output/` files reset to the clean Git repository state.
+- **Data Isolation:** User uploaded files and session states are isolated per active browser session. Datasets and email drafts are never exposed as public static URLs.
+
+---
+
 ## ⚖️ Privacy, Security & Ethical Guidelines
 
 - **Zero Automatic Email Dispatching**: All emails are generated strictly as local files. No background network requests or SMTP connections are initiated.
