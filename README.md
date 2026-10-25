@@ -5,6 +5,7 @@
 [![Pandas](https://img.shields.io/badge/Pandas-2.0+-150458?logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Tests](https://img.shields.io/badge/Tests-157%20Passed-4ADE80?logo=pytest&logoColor=white)](https://pytest.org/)
 [![License](https://img.shields.io/badge/License-Educational%20%2F%20Internship-818CF8)](#-academic--internship-context)
+[![Deploy with Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/deploy?repository=Sanjai07knightrider/DATA_FLOW_STUDIO&branch=main&mainModule=app.py)
 
 An end-to-end Python data pipeline and analytics dashboard demonstrating ethical web data collection, CSV schema validation, data preparation, synthetic benchmark generation, and standards-compliant email draft packaging.
 
