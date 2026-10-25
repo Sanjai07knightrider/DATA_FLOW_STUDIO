@@ -1,0 +1,70 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables & secrets — NEVER commit these
+.env
+.env.*
+!.env.example
+
+# Streamlit config and runtime secrets
+.streamlit/
+
+# Generated runtime outputs & archives (preserves local data, ignores from Git)
+output/
+*.zip
+*.eml
+*.tar.gz
+
+# Uploaded / temporary datasets
+uploaded_*.csv
+*uploaded_original*
+
+# Pytest, coverage & testing caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+
+# IDEs & code editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs & temp files
+*.log
+tmp/
+temp/
